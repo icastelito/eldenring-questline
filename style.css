@@ -1,0 +1,166 @@
+    body {
+        background-color: #0f1c15;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-image: url(https://ovicio.com.br/wp-content/uploads/2022/02/20220223-elden-ring.jpg)
+    }
+    
+    header {
+        background-color: #333333;
+        text-align: center;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        color: #fff;
+        border-bottom: 1px solid rgba(218, 165, 32, 0.6);
+        font-family: 'Arial';
+    }
+    
+    .principal-content {
+        background-color: rgba(34, 34, 34, 0.95);
+        font-family: 'Arial';
+        color: #fff;
+        font-size: 12pt;
+        padding: 15px;
+        border-top: 1px solid rgba(218, 165, 32, 0.6);
+        border-bottom: 1px solid rgba(218, 165, 32, 0.6);
+        margin-top: 200px;
+        position: relative;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .contato {
+        background-color: rgba(34, 34, 34, 0.95);
+        font-family: 'Arial';
+        color: #fff;
+        font-size: 12pt;
+        padding-top: 25px;
+        padding-bottom: 40px;
+        border-top: 1px solid rgba(218, 165, 32, 0.6);
+        margin-top: 200px;
+        position: solid;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .contato2 {
+        background-color: rgba(34, 34, 34, 0.95);
+        font-family: 'Arial';
+        color: #fff;
+        font-size: 12pt;
+        padding-top: 25px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid rgba(218, 165, 32, 0.6);
+        position: solid;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+    .icone-contato {
+        width: 55px;
+        float: left;
+        margin-right: 10px;
+        margin-left: 5px;
+        border-radius: 10px
+    }
+    
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    #icone {
+        cursor: pointer;
+        padding: 15px;
+        position: absolute;
+        z-index: 5;
+    }
+    
+    #check {
+        display: none;
+        z-index: 5;
+    }
+    
+    .barra {
+        background-color: #333;
+        height: 113%;
+        width: 300px;
+        position: absolute;
+        left: -300px;
+        transition: all .25s linear;
+        z-index: 4;
+    }
+    
+    .barra .link {
+        list-style: none;
+        background-color: #494950;
+        border-radius: 25px;
+    }
+    
+    nav {
+        width: 100%;
+        position: absolute;
+        top: 60px;
+    }
+    
+    nav a {
+        text-decoration: none;
+    }
+    
+    .link {
+        color: #f4f4f9;
+        font-family: 'Arial';
+        font-size: 12pt;
+        padding: 15px;
+        border-bottom: 2px solid #222;
+        transition: all .2s linear;
+        opacity: 0;
+        margin-top: 200px;
+        margin-left: 5px;
+        margin-right: 5px;
+        box-shadow: 3px 3px 3px #282828;
+    }
+    
+    .link:hover {
+        background-color: rgba(218, 165, 32, 0.6);
+    }
+    
+    #check:checked~.barra nav a .link {
+        opacity: 1;
+        margin-top: 0;
+        transition-delay: .2s;
+    }
+    
+    #check:checked~.barra {
+        transform: translateX(300px);
+    }
+    
+    .elden-ring {
+        position: relative;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        align-items: center;
+    }
+    
+    .rodape {
+        background-color: rgba(34, 34, 34, 0.95);
+        position: absolute;
+        bottom: 0%;
+        font-family: 'Arial';
+        color: #fff;
+        font-size: 12pt;
+        border-top: 1px solid rgba(218, 165, 32, 0.6);
+        padding: 5px;
+        padding-left: 33.42%;
+        padding-right: 33.42%;
+    }
+    
+    .link-texto {
+        color: #f4f4f9;
+        font-family: 'Arial';
+    }
+    
+    .link-texto:hover {
+        color: rgba(218, 165, 32);
+    }
