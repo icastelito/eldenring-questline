@@ -73,7 +73,13 @@
         cursor: pointer;
         padding: 15px;
         position: absolute;
+        transition: 500ms;
         z-index: 5;
+    }
+
+    #icone:hover{
+        color:  rgba(218, 165, 32, 0.8);
+        transition: 300ms;
     }
     
     #check {
@@ -146,14 +152,15 @@
     .rodape {
         background-color: rgba(34, 34, 34, 0.95);
         position: absolute;
-        bottom: 0%;
+        bottom: 0px;
         font-family: 'Arial';
         color: #fff;
         font-size: 12pt;
         border-top: 1px solid rgba(218, 165, 32, 0.6);
         padding: 5px;
-        padding-left: 33.42%;
-        padding-right: 33.42%;
+        width: 100%;
+        text-align: center;
+       
     }
     
     .link-texto {
