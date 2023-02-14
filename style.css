@@ -1,170 +1,244 @@
 * {
-  margin: 0px;
-  padding: 0px;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  background-color: #0f1c15;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-image: url(https://ovicio.com.br/wp-content/uploads/2022/02/20220223-elden-ring.jpg);
+	background-color: #0f1c15;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-image: url(https://ovicio.com.br/wp-content/uploads/2022/02/20220223-elden-ring.jpg);
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1;
 }
 
 header {
-  background-color: #333333;
-  text-align: center;
-  padding-top: 9px;
-  padding-bottom: 9px;
-  color: #fff;
-  border-bottom: 1px solid rgba(218, 165, 32, 0.6);
-  font-family: "Arial";
+	background-color: #333333;
+	text-align: center;
+	padding: 9px 0;
+	color: #fff;
+	border-bottom: 1px solid rgba(218, 165, 32, 0.6);
+	font-family: Arial, sans-serif;
 }
 
 #icone {
-  cursor: pointer;
-  padding: 15px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: 500ms;
-  z-index: 5;
+	cursor: pointer;
+	padding: 15px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	transition: 500ms;
+	z-index: 5;
 }
 
 #icone:hover {
-  color: rgba(218, 165, 32, 0.8);
-  transition: 300ms;
+	color: rgba(218, 165, 32, 0.8);
+	transition: 300ms;
 }
 
 #check {
-  display: none;
-  z-index: 5;
+	display: none;
+	z-index: 5;
 }
 
 nav {
-  width: 100%;
-  position: absolute;
-  top: 60px;
+	width: 100%;
+	position: absolute;
+	top: 60px;
+	display: flex;
+	flex-direction: column;
 }
 
 nav a {
-  text-decoration: none;
+	text-decoration: none;
+	color: #f4f4f9;
+	font-family: Arial, sans-serif;
+	font-size: 0.75rem;
+	padding: 15px 5px;
+	border-bottom: 2px solid #222;
+	background-color: #494950;
+	border-radius: 4px;
+	margin: 5px;
+	transition: all 0.2s linear;
+	opacity: 0;
+	margin-top: 200px;
+	box-shadow: 0 3px 3px 0 rgba(40, 40, 40, 0.8);
 }
 
-#check:checked ~ .barra nav a .link {
-  opacity: 1;
-  margin-top: 0;
-  transition-delay: 0.2s;
+nav a:hover {
+	background-color: rgba(218, 165, 32, 0.6);
+}
+
+#check:checked ~ .barra nav a {
+	opacity: 1;
+	margin-top: 0;
+	transition-delay: 0.2s;
 }
 
 #check:checked ~ .barra {
-  transform: translateX(300px);
+	transform: translateX(300px);
 }
 
 .elden-ring {
-  position: relative;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  align-items: center;
+	display: block;
+	max-width: 100%;
+	width: auto;
+	height: auto;
+	margin: 10px auto;
 }
 
 .rodape {
-  background-color: rgba(34, 34, 34, 0.95);
-  position: absolute;
-  bottom: 0px;
-  font-family: "Arial";
-  color: #fff;
-  font-size: 12pt;
-  border-top: 1px solid rgba(218, 165, 32, 0.6);
-  padding: 5px;
-  width: 100%;
-  text-align: center;
+	background-color: rgba(34, 34, 34, 0.95);
+	position: relative;
+	font-family: Arial, sans-serif;
+	color: #fff;
+	font-size: 0.75rem;
+	border-top: 1px solid rgba(218, 165, 32, 0.6);
+	padding: 5px;
+	width: 100%;
+	text-align: center;
+	margin-top: 2rem;
 }
 
 .link-texto {
-  color: #f4f4f9;
-  font-family: "Arial";
+	color: #f4f4f9;
+	font-family: Arial, sans-serif;
+	text-decoration: none;
+	transition: color 0.3s ease;
 }
 
 .link-texto:hover {
-  color: rgba(218, 165, 32);
+	color: rgba(218, 165, 32, 0.9);
 }
+
 .link {
-  color: #f4f4f9;
-  font-family: "Arial";
-  font-size: 12pt;
-  padding: 15px;
-  border-bottom: 2px solid #222;
-  transition: all 0.2s linear;
-  opacity: 0;
-  margin-top: 200px;
-  margin-left: 5px;
-  margin-right: 5px;
-  box-shadow: 3px 3px 3px #282828;
+	color: #f4f4f9;
+	font-family: Arial, sans-serif;
+	font-size: 0.75rem;
+	padding: 15px 5px;
+	border-bottom: 2px solid #222;
+	transition: all 0.2s linear;
+	opacity: 0;
+	margin-top: 200px;
+	margin-left: 5px;
+	margin-right: 5px;
+	box-shadow: 0 3px 3px 0 rgba(40, 40, 40, 0.8);
 }
 
 .link:hover {
-  background-color: rgba(218, 165, 32, 0.6);
+	background-color: rgba(218, 165, 32, 0.6);
+	border-radius: 4px;
 }
 
 .barra {
-  background-color: #333;
-  height: 113%;
-  width: 300px;
-  position: absolute;
-  left: -300px;
-  transition: all 0.25s linear;
-  z-index: 4;
-}
-
-.barra .link {
-  list-style: none;
-  background-color: #494950;
-  border-radius: 25px;
+	background-color: #333;
+	height: 113%;
+	width: 300px;
+	position: absolute;
+	left: -300px;
+	transition: all 0.25s linear;
+	z-index: 4;
 }
 
 .principal-content {
-  background-color: rgba(34, 34, 34, 0.95);
-  font-family: "Arial";
-  color: #fff;
-  font-size: 12pt;
-  padding: 15px;
-  border-top: 1px solid rgba(218, 165, 32, 0.6);
-  border-bottom: 1px solid rgba(218, 165, 32, 0.6);
-  margin-top: 200px;
-  position: relative;
-  margin-left: 10%;
-  margin-right: 10%;
+	background-color: rgba(34, 34, 34, 0.95);
+	font-family: Arial, sans-serif;
+	color: #fff;
+	font-size: 0.75rem;
+	padding: 15px;
+	border-top: 1px solid rgba(218, 165, 32, 0.6);
+	border-bottom: 1px solid rgba(218, 165, 32, 0.6);
+	margin-top: 200px;
+	margin-bottom: 5rem;
+	position: relative;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 .lista-de-contatos {
-  background-color: rgba(34, 34, 34, 0.95);
-  font-family: "Arial";
-  color: #fff;
-  font-size: 12pt;
-  padding: 15px;
-  border-top: 1px solid rgba(218, 165, 32, 0.6);
-  border-bottom: 1px solid rgba(218, 165, 32, 0.6);
-  position: relative;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 5%;
+	background-color: rgba(34, 34, 34, 0.95);
+	font-family: Arial, sans-serif;
+	color: #fff;
+	font-size: 0.75rem;
+	padding: 15px;
+	border-top: 1px solid rgba(218, 165, 32, 0.6);
+	border-bottom: 1px solid rgba(218, 165, 32, 0.6);
+	position: relative;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 200px;
+	margin-bottom: 5rem;
+	margin-top: 5%;
 }
 
 .contato {
-  font-family: "Arial";
-  color: #fff;
-  font-size: 12pt;
-  padding-top: 25px;
-  padding-bottom: 40px;
-  margin-left: 10%;
-  margin-right: 10%;
+	font-family: Arial, sans-serif;
+	color: #fff;
+	font-size: 0.75rem;
+	padding: 25px 0 40px 0;
+	margin-left: 10%;
+	margin-right: 10%;
 }
 
 .icone-contato {
-  width: 55px;
-  float: left;
-  margin-right: 10px;
-  margin-left: 5px;
-  border-radius: 10px;
+	width: 55px;
+	float: left;
+	margin-right: 10px;
+	margin-left: 5px;
+	border-radius: 10px;
+}
+
+/* Reset semântico para tags padrão */
+h1 {
+	margin: 0;
+}
+
+h2 {
+	margin: 0.5rem 0;
+	font-size: 1.5rem;
+}
+
+p {
+	margin: 1rem 0;
+	line-height: 1.6;
+}
+
+ul,
+ol {
+	margin: 1rem 0;
+	padding-left: 1.5rem;
+}
+
+li {
+	margin: 0.5rem 0;
+}
+
+em {
+	font-style: italic;
+}
+
+/* Melhorias de acessibilidade */
+a:focus {
+	outline: 2px solid rgba(218, 165, 32, 0.8);
+	outline-offset: 2px;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+	.principal-content,
+	.lista-de-contatos {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	.contato {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
 }
